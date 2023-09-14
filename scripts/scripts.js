@@ -55,13 +55,13 @@ setInterval(function(){
     let navThemeEle = document.getElementById('navThemeEle');
     if (navThemeEle.innerHTML == 'DARK'){
         navThemeEle.addEventListener('click',function(){
-            linkCSS.href = '/styles/thlite.css';
+            linkCSS.href = '/VERTE.IO/styles/thlite.css';
             navThemeEle.innerHTML = 'LITE';
         });
     }
     else if (navThemeEle.innerHTML == 'LITE'){
         navThemeEle.addEventListener('click',function(){
-            linkCSS.href = '/styles/thdark.css';
+            linkCSS.href = '/VERTE.IO/styles/thdark.css';
             navThemeEle.innerHTML = 'DARK';
         });
     }
@@ -101,11 +101,11 @@ searchForm.addEventListener('submit',searchBar);
 function searchBar(){
     let searchValue = document.getElementById('navSearchEle').value;
     if (searchValue == '8848'){
-        searchForm.setAttribute('action','/generate/generate.html');
+        searchForm.setAttribute('action','/VERTE.IO/generate/generate.html');
     }
     else{
         let searchTitle = searchValue.replaceAll(' ','-').toLowerCase();
-        searchForm.setAttribute('action','/video/' + searchTitle + '.html');
+        searchForm.setAttribute('action','/VERTE.IO/video/' + searchTitle + '.html');
     }
 }
 

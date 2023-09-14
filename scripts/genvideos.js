@@ -75,8 +75,8 @@ function mediaWindows(wind,widt){
             contentFranchises += '<div class="mediaRow">';
             for (j=0;j<wind;j++){
                 contentFranchises += '<div class="mediaEle" style="width:'+widt+'%">';
-                contentFranchises += '<div class="mediaPicOut"><a href="/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html"><img class="mediaPic" src="/media/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.webp"></img></a></div>';
-                contentFranchises += '<a href="/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html" class="mediaTit">'+firstUpper(title[k])+'</a><p class="mediaYear">( '+year[k]+' )</p></div>';
+                contentFranchises += '<div class="mediaPicOut"><a href="/VERTE.IO/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html"><img class="mediaPic" src="/VERTE.IO/media/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.webp"></img></a></div>';
+                contentFranchises += '<a href="/VERTE.IO/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html" class="mediaTit">'+firstUpper(title[k])+'</a><p class="mediaYear">( '+year[k]+' )</p></div>';
                 k=k+1;
             }
             contentFranchises += '</div>';
@@ -85,8 +85,8 @@ function mediaWindows(wind,widt){
             contentFranchises += '<div class="mediaRow">';
             for (j=0;j<title.length%wind;j++){
                 contentFranchises += '<div class="mediaEle" style="width:'+widt+'%">';
-                contentFranchises += '<div class="mediaPicOut"><a href="/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html"><img class="mediaPic" src="/media/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.webp"></img></a></div>';
-                contentFranchises += '<a href="/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html" class="mediaTit">'+firstUpper(title[k])+'</a><p class="mediaYear">( '+year[k]+' )</p></div>';
+                contentFranchises += '<div class="mediaPicOut"><a href="/VERTE.IO/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html"><img class="mediaPic" src="/VERTE.IO/media/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.webp"></img></a></div>';
+                contentFranchises += '<a href="/VERTE.IO/video/'+title[k].replaceAll(' ','-')+'-'+year[k]+'.html" class="mediaTit">'+firstUpper(title[k])+'</a><p class="mediaYear">( '+year[k]+' )</p></div>';
                 k=k+1;
             }
             for (j=0;j<(wind-(title.length%wind));j++){

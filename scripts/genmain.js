@@ -14,7 +14,7 @@ setInterval(function(){
         for (i=0;i<8;i++){
             contentMediaFranch += '<div class="mediaRowFr">';
             for(j=0;j<2;j++){
-                contentMediaFranch += '<div class="mediaEleFr"><div class="mediaPicFrOut"><a href="/franchise/'+franchises[k]+'.html"><div class="mediaPicFr" id="picFr'+(k+1)+'"></div></a></div><a class="mediaTitFr" href="/franchise/'+franchises[k]+'.html">'+franchises[k].replaceAll('-',' ').toUpperCase()+'</a></div>';
+                contentMediaFranch += '<div class="mediaEleFr"><div class="mediaPicFrOut"><a href="/VERTE.IO/franchise/'+franchises[k]+'.html"><div class="mediaPicFr" id="picFr'+(k+1)+'"></div></a></div><a class="mediaTitFr" href="/VERTE.IO/franchise/'+franchises[k]+'.html">'+franchises[k].replaceAll('-',' ').toUpperCase()+'</a></div>';
                 k=k+1;
             }
             contentMediaFranch += '</div>';
@@ -23,7 +23,7 @@ setInterval(function(){
     else{
         for (i=0;i<16;i++){
             contentMediaFranch += '<div class="mediaRowFr">';
-            contentMediaFranch += '<div class="mediaEleFr" style="width:100%"><div class="mediaPicFrOut"><a href="/franchise/'+franchises[k]+'.html"><div class="mediaPicFr" id="picFr'+(k+1)+'"></div></a></div><a class="mediaTitFr" href="/franchise/'+franchises[k]+'.html">'+franchises[k].replaceAll('-',' ').toUpperCase()+'</a></div>';
+            contentMediaFranch += '<div class="mediaEleFr" style="width:100%"><div class="mediaPicFrOut"><a href="/VERTE.IO/franchise/'+franchises[k]+'.html"><div class="mediaPicFr" id="picFr'+(k+1)+'"></div></a></div><a class="mediaTitFr" href="/VERTE.IO/franchise/'+franchises[k]+'.html">'+franchises[k].replaceAll('-',' ').toUpperCase()+'</a></div>';
             k=k+1;
             contentMediaFranch += '</div>';
         }
