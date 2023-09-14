@@ -49,7 +49,6 @@
   cursor: default;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   scroll-behavior: smooth;
   font-family: inter;
@@ -86,22 +85,11 @@ a {
 }
 
 .headerShow {
-  -webkit-animation: headerShow 0.2s ease-in-out forwards;
-          animation: headerShow 0.2s ease-in-out forwards;
+  animation: headerShow 0.2s ease-in-out forwards;
 }
 
 .headerHide {
-  -webkit-animation: headerHide 0.2s ease-in-out forwards;
-          animation: headerHide 0.2s ease-in-out forwards;
-}
-
-@-webkit-keyframes headerShow {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
+  animation: headerHide 0.2s ease-in-out forwards;
 }
 
 @keyframes headerShow {
@@ -110,14 +98,6 @@ a {
   }
   100% {
     transform: translateY(0%);
-  }
-}
-@-webkit-keyframes headerHide {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-100%);
   }
 }
 @keyframes headerHide {
@@ -134,7 +114,7 @@ a {
 }
 
 #footer {
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
   font-weight: bold;
   padding: 2rem 0;
   clear: both;
@@ -151,23 +131,7 @@ a {
 }
 
 #goUp:hover {
-  -webkit-animation: goUpAnim 0.4s linear;
-          animation: goUpAnim 0.4s linear;
-}
-
-@-webkit-keyframes goUpAnim {
-  0% {
-    transform: rotate(0deg) scale(3.6);
-  }
-  33% {
-    transform: rotate(360deg) scale(5.4);
-  }
-  66% {
-    transform: rotate(0deg) scale(5.4);
-  }
-  100% {
-    transform: rotate(360deg) scale(3.6);
-  }
+  animation: goUpAnim 0.4s linear;
 }
 
 @keyframes goUpAnim {
@@ -254,71 +218,71 @@ a {
 }
 
 #picFr1 {
-  background-image: url(/media/franchise/marvel.webp);
+  background-image: url(/VERTE.IO/media/franchise/marvel.webp);
 }
 
 #picFr2 {
-  background-image: url(/media/franchise/star-wars.webp);
+  background-image: url(/VERTE.IO/media/franchise/star-wars.webp);
 }
 
 #picFr3 {
-  background-image: url(/media/franchise/pixar.webp);
+  background-image: url(/VERTE.IO/media/franchise/pixar.webp);
 }
 
 #picFr4 {
-  background-image: url(/media/franchise/dreamworks.webp);
+  background-image: url(/VERTE.IO/media/franchise/dreamworks.webp);
 }
 
 #picFr5 {
-  background-image: url(/media/franchise/disney.webp);
+  background-image: url(/VERTE.IO/media/franchise/disney.webp);
 }
 
 #picFr6 {
-  background-image: url(/media/franchise/illumination.webp);
+  background-image: url(/VERTE.IO/media/franchise/illumination.webp);
 }
 
 #picFr7 {
-  background-image: url(/media/franchise/dc-comics.webp);
+  background-image: url(/VERTE.IO/media/franchise/dc-comics.webp);
 }
 
 #picFr8 {
-  background-image: url(/media/franchise/x-men.webp);
+  background-image: url(/VERTE.IO/media/franchise/x-men.webp);
 }
 
 #picFr9 {
-  background-image: url(/media/franchise/fast-and-furious.webp);
+  background-image: url(/VERTE.IO/media/franchise/fast-and-furious.webp);
 }
 
 #picFr10 {
-  background-image: url(/media/franchise/transformers.webp);
+  background-image: url(/VERTE.IO/media/franchise/transformers.webp);
 }
 
 #picFr11 {
-  background-image: url(/media/franchise/harry-potter.webp);
+  background-image: url(/VERTE.IO/media/franchise/harry-potter.webp);
 }
 
 #picFr12 {
-  background-image: url(/media/franchise/lord-of-the-rings.webp);
+  background-image: url(/VERTE.IO/media/franchise/lord-of-the-rings.webp);
 }
 
 #picFr13 {
-  background-image: url(/media/franchise/blue-sky.webp);
+  background-image: url(/VERTE.IO/media/franchise/blue-sky.webp);
 }
 
 #picFr14 {
-  background-image: url(/media/franchise/sony-pictures.webp);
+  background-image: url(/VERTE.IO/media/franchise/sony-pictures.webp);
 }
 
 #picFr15 {
-  background-image: url(/media/franchise/nickelodeon.webp);
+  background-image: url(/VERTE.IO/media/franchise/nickelodeon.webp);
 }
 
 #picFr16 {
-  background-image: url(/media/franchise/cartoon-network.webp);
+  background-image: url(/VERTE.IO/media/franchise/cartoon-network.webp);
 }
 
 #picFr99 {
-  background-image: url(/media/franchise/void.webp);
+  background-image: url(/VERTE.IO/media/franchise/void.webp);
 }
 
 .mediaRow, .mediaRowFr {
@@ -362,8 +326,7 @@ a {
   line-height: 1.6rem;
   font-style: italic;
   letter-spacing: 0.1rem;
-  -webkit-animation: mediaYear 2s infinite;
-          animation: mediaYear 2s infinite;
+  animation: mediaYear 2s infinite;
 }
 
 .mediaEleFr {
@@ -390,17 +353,7 @@ a {
 }
 
 .mediaPicFr:hover {
-  -webkit-animation: mediaPicFr 10s;
-          animation: mediaPicFr 10s;
-}
-
-@-webkit-keyframes mediaYear {
-  0%, 100% {
-    transform: rotate(1deg);
-  }
-  50% {
-    transform: rotate(-1deg);
-  }
+  animation: mediaPicFr 10s;
 }
 
 @keyframes mediaYear {
@@ -409,17 +362,6 @@ a {
   }
   50% {
     transform: rotate(-1deg);
-  }
-}
-@-webkit-keyframes mediaPicFr {
-  10%, 100% {
-    background-position: center;
-  }
-  40% {
-    background-position: left;
-  }
-  70% {
-    background-position: right;
   }
 }
 @keyframes mediaPicFr {
