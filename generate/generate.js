@@ -19,7 +19,7 @@ godTypeEle[4].addEventListener('click',getEpisode);
 function getVoid(){
     godTypeEleAttr();
     godTypeEle[0].setAttribute('class','godTypeEleActive godTypeEle');
-    generateField.innerHTML = '<div class="mediaRowFr"><div id="mediaEleVoid"><div class="mediaPicFrOut"><a href="/franchise/void.html"><div class="mediaPicFr" id="picFr99"></div></a></div><a class="mediaTitFr" href="/franchise/void.html">VOID</a></div></div>';
+    generateField.innerHTML = '<div class="mediaRowFr"><div id="mediaEleVoid"><div class="mediaPicFrOut"><a href="/VERTE.IO/franchise/void.html"><div class="mediaPicFr" id="picFr99"></div></a></div><a class="mediaTitFr" href="/VERTE.IO/franchise/void.html">VOID</a></div></div>';
 }
 function getInfo(){
     godTypeEleAttr();
