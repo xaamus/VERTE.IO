@@ -1,0 +1,561 @@
+#navSearchEle {
+  background-color: unset;
+  color: unset;
+}
+
+.mediaPicFrOut:hover {
+  box-shadow: 0 0 1rem 0.2rem #fa9b52;
+  color: #fa9b52;
+  border: none;
+}
+
+#main a:hover:not(.episodeEle, .mediaTitFr, .mediaTit), .seasonInfo:hover, .godTypeEleActive, .godTypeEle:hover {
+  color: #fa9b52;
+}
+
+.mediaYear {
+  color: #f49dac;
+}
+
+#godType, .getButton {
+  background: linear-gradient(90deg, #fa9b52 0%, #f49dac 100%);
+}
+
+.episodeEle:hover {
+  background: linear-gradient(90deg, #fa9b52 0%, #f49dac 100%);
+  padding-top: 0.4rem;
+}
+
+.mediaPicOut, .mediaPicFrOut, #videoPicOut, #header, #iframeOut {
+  background: linear-gradient(135deg, #fa9b52 0%, #f49dac 40%, #f49dac 60%, #fa9b52 100%);
+}
+
+#header {
+  background: linear-gradient(135deg, #fa9b52 0%, #f49dac 100%);
+}
+
+#footer {
+  background: linear-gradient(135deg, #f49dac 0%, #fa9b52 100%);
+}
+
+.seasonInfo {
+  border-top: solid 0.4rem #fa9b52;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+  font-family: inter;
+  text-decoration: none;
+  color: unset;
+}
+
+#body {
+  overflow-x: hidden;
+}
+#body #headerCent, #body #mainCent, #body #footerCent {
+  width: 80%;
+  margin: auto;
+}
+#body #headerCent, #body #footerCent {
+  display: flex;
+  font-size: 1.2rem;
+}
+
+a {
+  transition: 0.2s;
+}
+
+#header {
+  letter-spacing: 0.4rem;
+  width: 100%;
+  height: 6rem;
+  position: fixed;
+  padding: 1rem 0;
+  z-index: 1;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+}
+
+.headerShow {
+  animation: headerShow 0.2s ease-in-out forwards;
+}
+
+.headerHide {
+  animation: headerHide 0.2s ease-in-out forwards;
+}
+
+@keyframes headerShow {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes headerHide {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+#main {
+  width: 100%;
+  padding-top: 10rem;
+}
+
+#footer {
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  padding: 2rem 0;
+  clear: both;
+  width: 100%;
+  height: 6rem;
+  display: flex;
+}
+
+#goUp {
+  bottom: 2.4rem;
+  right: 4%;
+  position: fixed;
+  transform: scale(3.6);
+}
+
+#goUp:hover {
+  animation: goUpAnim 0.4s linear;
+}
+
+@keyframes goUpAnim {
+  0% {
+    transform: rotate(0deg) scale(3.6);
+  }
+  33% {
+    transform: rotate(360deg) scale(5.4);
+  }
+  66% {
+    transform: rotate(0deg) scale(5.4);
+  }
+  100% {
+    transform: rotate(360deg) scale(3.6);
+  }
+}
+#navTheme {
+  width: 18%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.2rem;
+}
+#navTheme #navThemeEle {
+  border-radius: 2rem;
+  height: 2.5rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+
+#navTitle {
+  font-size: 2.2rem;
+  display: flex;
+  width: 30%;
+  height: 3rem;
+  justify-content: flex-start;
+}
+#navTitle #navTitleEle {
+  transition: 0.4s;
+}
+#navTitle .navTitleEleHov:hover {
+  letter-spacing: 0.8rem;
+}
+
+#navSearch {
+  width: 52%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+#navSearch form {
+  width: 100%;
+}
+#navSearch #navSearchEle {
+  font-size: 1.2rem;
+  height: 2.6rem;
+  width: 80%;
+  text-align: center;
+  padding: 0 1rem;
+  text-transform: uppercase;
+  font-weight: unset;
+  letter-spacing: 0.2rem;
+  border-radius: 2rem;
+  transition: 0.4s;
+}
+#navSearch #navSearchEle:focus {
+  width: 100%;
+}
+
+#scroll {
+  position: fixed;
+  width: 10px;
+  right: 1%;
+  top: 0;
+  border-radius: 90px;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+#picFr1 {
+  background-image: url(/VERTE.IO/media/franchise/marvel.webp);
+}
+
+#picFr2 {
+  background-image: url(/VERTE.IO/media/franchise/star-wars.webp);
+}
+
+#picFr3 {
+  background-image: url(/VERTE.IO/media/franchise/pixar.webp);
+}
+
+#picFr4 {
+  background-image: url(/VERTE.IO/media/franchise/dreamworks.webp);
+}
+
+#picFr5 {
+  background-image: url(/VERTE.IO/media/franchise/disney.webp);
+}
+
+#picFr6 {
+  background-image: url(/VERTE.IO/media/franchise/illumination.webp);
+}
+
+#picFr7 {
+  background-image: url(/VERTE.IO/media/franchise/dc-comics.webp);
+}
+
+#picFr8 {
+  background-image: url(/VERTE.IO/media/franchise/x-men.webp);
+}
+
+#picFr9 {
+  background-image: url(/VERTE.IO/media/franchise/fast-and-furious.webp);
+}
+
+#picFr10 {
+  background-image: url(/VERTE.IO/media/franchise/transformers.webp);
+}
+
+#picFr11 {
+  background-image: url(/VERTE.IO/media/franchise/harry-potter.webp);
+}
+
+#picFr12 {
+  background-image: url(/VERTE.IO/media/franchise/lord-of-the-rings.webp);
+}
+
+#picFr13 {
+  background-image: url(/VERTE.IO/media/franchise/blue-sky.webp);
+}
+
+#picFr14 {
+  background-image: url(/VERTE.IO/media/franchise/sony-pictures.webp);
+}
+
+#picFr15 {
+  background-image: url(/VERTE.IO/media/franchise/nickelodeon.webp);
+}
+
+#picFr16 {
+  background-image: url(/VERTE.IO/media/franchise/cartoon-network.webp);
+}
+
+#picFr99 {
+  background-image: url(/VERTE.IO/media/franchise/void.webp);
+}
+
+.mediaRow, .mediaRowFr {
+  height: 27rem;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.mediaEle, .mediaEleBlank {
+  width: 14%;
+}
+
+.mediaPic, .mediaPicFr {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  background-position: center;
+}
+
+.mediaPicOut, .mediaPicFrOut {
+  height: 70%;
+  width: 100%;
+  border-radius: 2.2rem;
+  transition: 1s;
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+}
+
+.mediaPicOut:hover {
+  transition: 0.2s;
+  transform: scale(1.1);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.mediaYear {
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  font-style: italic;
+  letter-spacing: 0.1rem;
+  animation: mediaYear 2s infinite;
+}
+
+.mediaEleFr {
+  width: 48%;
+}
+
+.mediaTitFr {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+
+.mediaPicFr {
+  transition: 0.5s;
+}
+
+.mediaPicFrOut {
+  margin-bottom: 1.4rem;
+  height: 20rem;
+}
+
+.mediaPicFrOut:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.mediaPicFr:hover {
+  animation: mediaPicFr 10s;
+}
+
+@keyframes mediaYear {
+  0%, 100% {
+    transform: rotate(1deg);
+  }
+  50% {
+    transform: rotate(-1deg);
+  }
+}
+@keyframes mediaPicFr {
+  10%, 100% {
+    background-position: center;
+  }
+  40% {
+    background-position: left;
+  }
+  70% {
+    background-position: right;
+  }
+}
+#videoAsideL {
+  float: left;
+  width: 50%;
+}
+
+#videoAsideR {
+  width: 50%;
+  float: right;
+  justify-content: flex-end;
+  display: flex;
+}
+
+#videoWatch {
+  width: 90%;
+}
+
+#videoWatchTitle {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+#iframeOut {
+  width: 100%;
+  display: flex;
+  border-radius: 2.2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem;
+  height: 25rem;
+}
+#iframeOut #iframeId {
+  border-radius: 2rem;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+#videoInfo {
+  font-size: 1.2rem;
+}
+
+#videoPicOut {
+  width: 38%;
+  float: left;
+  border-radius: 2.2rem;
+  padding: 0.4rem;
+}
+
+#videoPic {
+  width: 100%;
+  border-radius: 2rem;
+  margin-bottom: -0.3rem;
+}
+
+#videoDet {
+  width: 62%;
+  line-height: 1.8rem;
+  padding: 0 2rem;
+  float: right;
+}
+#videoDet p {
+  margin-bottom: 1rem;
+}
+#videoDet p:nth-child(4) {
+  text-align: justify;
+}
+#videoDet span {
+  font-weight: bold;
+}
+
+#seasonList {
+  padding-top: 4rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  clear: both;
+  margin-bottom: 4rem;
+}
+
+.seasonInfo {
+  padding: 1rem 0;
+  transition: 0.2s;
+}
+.seasonInfo .seasonTit {
+  letter-spacing: 0.2rem;
+  font-size: 1.6rem;
+}
+.seasonInfo .seasonArr {
+  font-size: 2rem;
+  float: right;
+  margin-right: 1rem;
+  line-height: 0rem;
+  margin-top: 0.8rem;
+}
+
+.episodeList {
+  text-align: center;
+  display: none;
+}
+.episodeList .episodeEle {
+  line-height: 3rem;
+  display: flex;
+  letter-spacing: 0.1rem;
+}
+.episodeList .episodeEle .episodeOvr {
+  width: 10%;
+}
+.episodeList .episodeEle .episodeSea {
+  width: 13%;
+}
+.episodeList .episodeEle .episodeTit {
+  width: 77%;
+}
+
+#episodeList1 {
+  display: unset;
+}
+
+#mediaEleVoid {
+  width: 100%;
+}
+
+#godType {
+  border-radius: 2rem;
+  width: 80%;
+  display: flex;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+}
+
+.godTypeEle, .godTypeEleActive {
+  height: 3.6rem;
+  width: 20%;
+  font-size: 1.6rem;
+  transition: 0.4s;
+  display: grid;
+  align-items: center;
+}
+
+.godTypeEleActive, .godTypeEle:hover {
+  font-size: 1.8rem;
+}
+
+.godTypeEle:nth-of-type(1) {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.godTypeEle:nth-of-type(5) {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+#generateField {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+#generateField input {
+  border-radius: 1.6rem;
+  margin-bottom: 1rem;
+  line-height: 2.6rem;
+  padding: 0.2rem 1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: unset;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#generateField input:hover {
+  letter-spacing: 0.2rem;
+}
+
+.getName {
+  width: 60%;
+}
+
+.getOther, .getButton {
+  width: 30%;
+}/*# sourceMappingURL=styles.css.map */
