@@ -1,0 +1,106 @@
+#videoAsideL{
+    float: left;
+    width: 50%;
+}
+#videoAsideR{
+    width: 50%;
+    float: right;
+    justify-content: flex-end;
+    display: flex;
+}
+#videoWatch{
+    width: 90%;
+}
+#videoWatchTitle{
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+#iframeOut{
+    width: 100%;
+    display: flex;
+    border-radius: 2.2rem;
+    justify-content: center;
+    align-items: center;
+    padding: .4rem;
+    height: 25rem;
+    #iframeId{
+        border-radius: 2rem;
+        border: none;
+        height: 100%;
+        width: 100%;
+    }
+}
+#videoInfo{
+    font-size: 1.2rem;
+}
+#videoPicOut{
+    width: 38%;
+    float: left;
+    border-radius: 2.2rem;
+    padding: .4rem;
+}
+#videoPic{
+    width: 100%;
+    border-radius: 2rem;
+    margin-bottom: -.3rem;
+}
+#videoDet{
+    width: 62%;
+    line-height: 1.8rem;
+    padding: 0 2rem;
+    float: right;
+    p{
+        margin-bottom: 1rem;
+    }
+    p:nth-child(4){
+        text-align: justify;
+    }
+    span{
+        font-weight: bold;
+    }
+}
+#seasonList{
+    padding-top: 4rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    clear: both;
+    margin-bottom: 4rem;
+}
+.seasonInfo{
+    padding: 1rem 0;
+    transition: .2s;
+    .seasonTit{
+        letter-spacing: .2rem;
+        font-size: 1.6rem;
+    }
+    .seasonArr{
+        font-size: 2rem;
+        float: right;
+        margin-right: 1rem;
+        line-height: 0rem;
+        margin-top: .8rem;
+    }
+}
+.episodeList{
+    text-align: center;
+    display: none;
+    .episodeEle{
+        line-height: 3rem;
+        display: flex;
+        letter-spacing: .1rem;
+        .episodeOvr{
+            width: 10%;
+        }
+        .episodeSea{
+            width: 13%;
+        }
+        .episodeTit{
+            width: 77%;
+        }
+    }
+}
+#episodeList1{
+    display: unset;
+}

@@ -1,0 +1,79 @@
+.mediaRow,.mediaRowFr{
+    height: 27rem;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.mediaEle,.mediaEleBlank{
+    width: 14%;
+}
+.mediaPic,.mediaPicFr{
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    background-position: center;
+}
+.mediaPicOut,.mediaPicFrOut{
+    height: 70%;
+    width: 100%;
+    border-radius: 2.2rem;
+    transition: 1s;
+    margin-bottom: 1rem;
+    padding: .4rem;
+}
+.mediaPicOut:hover{
+    transition: .2s;
+    transform: scale(1.1);
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+.mediaYear{
+    font-size: .8rem;
+    line-height: 1.6rem;
+    font-style: italic;
+    letter-spacing: .1rem;
+    animation: mediaYear 2s infinite;
+}
+.mediaEleFr{
+    width: 48%;
+}
+.mediaTitFr{
+    font-size: 1.4rem;
+    letter-spacing: .2rem;
+}
+.mediaPicFr{
+    transition: .5s;
+}
+.mediaPicFrOut{
+    margin-bottom: 1.4rem;
+    height: 20rem;
+}
+.mediaPicFrOut:hover{
+    transform: scale(1.05);
+    transition: .2s;
+}
+.mediaPicFr:hover{
+    animation: mediaPicFr 10s;
+    //filter: grayscale(0) !important;
+}
+@keyframes mediaYear{
+    0%,100%{
+        transform: rotate(1deg);
+    }
+    50%{
+        transform: rotate(-1deg);
+    }
+}
+@keyframes mediaPicFr{
+    10%,100%{
+        background-position: center;
+    }
+    40%{
+        background-position: left;
+    }
+    70%{
+        background-position: right;
+    }
+}

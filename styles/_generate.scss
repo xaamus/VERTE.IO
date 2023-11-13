@@ -1,0 +1,55 @@
+#mediaEleVoid{
+    width: 100%;
+}
+#godType{
+    border-radius: 2rem;
+    width: 80%;
+    display: flex;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+}
+.godTypeEle,.godTypeEleActive{
+    height: 3.6rem;
+    width: 20%;
+    font-size: 1.6rem;
+    transition: .4s;
+    display: grid;
+    align-items: center;
+}
+.godTypeEleActive,.godTypeEle:hover{
+    font-size: 1.8rem;
+}
+.godTypeEle:nth-of-type(1){
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.godTypeEle:nth-of-type(5){
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+#generateField{
+    margin-top: 4rem;
+    text-align: center;
+}
+#generateField input{
+    border-radius: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 2.6rem;
+    padding: .2rem 1rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: unset;
+    font-weight: bold;
+    transition: .4s;
+}
+#generateField input:hover{
+    letter-spacing: .2rem;
+}
+.getName{
+    width: 60%;
+}
+.getOther,.getButton{
+    width: 30%;
+}
