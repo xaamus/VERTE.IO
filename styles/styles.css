@@ -4,42 +4,41 @@
 }
 
 .mediaPicFrOut:hover {
-  box-shadow: 0 0 1rem 0.2rem #fa9b52;
-  color: #fa9b52;
+  box-shadow: 0 0 1rem 0.2rem #9237e2;
+  color: #9237e2;
   border: none;
 }
 
 #main a:hover:not(.episodeEle, .mediaTitFr, .mediaTit), .seasonInfo:hover, .godTypeEleActive, .godTypeEle:hover {
-  color: #fa9b52;
+  color: #9237e2;
 }
 
 .mediaYear {
-  color: #f49dac;
+  color: #e542e7;
 }
 
 #godType, .getButton {
-  background: linear-gradient(90deg, #fa9b52 0%, #f49dac 100%);
+  background: linear-gradient(90deg, #9237e2 0%, #e542e7 100%);
 }
 
 .episodeEle:hover {
-  background: linear-gradient(90deg, #fa9b52 0%, #f49dac 100%);
-  padding-top: 0.4rem;
+  background: linear-gradient(90deg, #9237e2 0%, #e542e7 100%);
 }
 
 .mediaPicOut, .mediaPicFrOut, #videoPicOut, #header, #iframeOut {
-  background: linear-gradient(135deg, #fa9b52 0%, #f49dac 40%, #f49dac 60%, #fa9b52 100%);
+  background: linear-gradient(135deg, #9237e2 0%, #e542e7 40%, #e542e7 60%, #9237e2 100%);
 }
 
 #header {
-  background: linear-gradient(135deg, #fa9b52 0%, #f49dac 100%);
+  background: linear-gradient(135deg, #9237e2 0%, #e542e7 100%);
 }
 
 #footer {
-  background: linear-gradient(135deg, #f49dac 0%, #fa9b52 100%);
+  background: linear-gradient(135deg, #e542e7 0%, #9237e2 100%);
 }
 
 .seasonInfo {
-  border-top: solid 0.4rem #fa9b52;
+  border-top: solid 0.4rem #9237e2;
 }
 
 * {
@@ -59,7 +58,7 @@
 #body {
   overflow-x: hidden;
 }
-#body #headerCent, #body #mainCent, #body #footerCent {
+#body #headerCent, #body #footerCent {
   width: 80%;
   margin: auto;
 }
@@ -109,8 +108,9 @@ a {
   }
 }
 #main {
-  width: 100%;
   padding-top: 10rem;
+  display: flex;
+  justify-content: center;
 }
 
 #footer {
@@ -285,77 +285,44 @@ a {
   background-image: url(/VERTE.IO/media/franchise/void.webp);
 }
 
-.mediaRow, .mediaRowFr {
-  height: 27rem;
-  width: 100%;
+#mediaEleCont {
   display: flex;
-  text-align: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.mediaEle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
 }
-
-.mediaEle, .mediaEleBlank {
-  width: 14%;
+.mediaEle .mediaPicOut {
+  width: 80%;
+  border-radius: 2.2rem;
+  transition: 1s transform;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
 }
-
-.mediaPic, .mediaPicFr {
-  height: 100%;
+.mediaEle .mediaPicOut .mediaPic {
   width: 100%;
-  border-radius: 2rem;
+  height: 100%;
+  border-radius: 1.9rem;
   background-position: center;
 }
-
-.mediaPicOut, .mediaPicFrOut {
-  height: 70%;
-  width: 100%;
-  border-radius: 2.2rem;
-  transition: 1s;
-  margin-bottom: 1rem;
-  padding: 0.4rem;
+.mediaEle .mediaPicOut:hover {
+  transition: 0.2s transform;
+  transform: scale(1.04);
 }
-
-.mediaPicOut:hover {
-  transition: 0.2s;
-  transform: scale(1.1);
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.mediaYear {
+.mediaEle .mediaYear {
   font-size: 0.8rem;
   line-height: 1.6rem;
   font-style: italic;
   letter-spacing: 0.1rem;
   animation: mediaYear 2s infinite;
 }
-
-.mediaEleFr {
-  width: 48%;
-}
-
-.mediaTitFr {
-  font-size: 1.4rem;
-  letter-spacing: 0.2rem;
-}
-
-.mediaPicFr {
-  transition: 0.5s;
-}
-
-.mediaPicFrOut {
-  margin-bottom: 1.4rem;
-  height: 20rem;
-}
-
-.mediaPicFrOut:hover {
-  transform: scale(1.05);
-  transition: 0.2s;
-}
-
-.mediaPicFr:hover {
-  animation: mediaPicFr 10s;
-}
-
 @keyframes mediaYear {
   0%, 100% {
     transform: rotate(1deg);
@@ -363,6 +330,37 @@ a {
   50% {
     transform: rotate(-1deg);
   }
+}
+
+.mediaEleFr {
+  width: 48%;
+}
+.mediaEleFr .mediaPicFrOut {
+  width: 70%;
+  border-radius: 2.2rem;
+  transition: 1s;
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  margin-bottom: 1.4rem;
+  height: 20rem;
+}
+.mediaEleFr .mediaPicFrOut .mediaPicFr {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  background-position: center;
+  transition: 0.5s;
+}
+.mediaEleFr .mediaPicFrOut .mediaPicFr:hover {
+  animation: mediaPicFr 10s;
+}
+.mediaEleFr .mediaPicFrOut:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+.mediaEleFr .mediaTitFr {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
 }
 @keyframes mediaPicFr {
   10%, 100% {
@@ -375,6 +373,7 @@ a {
     background-position: right;
   }
 }
+
 #videoAsideL {
   float: left;
   width: 50%;

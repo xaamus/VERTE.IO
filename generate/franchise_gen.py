@@ -1,7 +1,7 @@
 print()
 k=0
-title=['the guardians of the galaxy vol 3','secret invasion','ant man and the wasp quantumania','black panther wakanda forever','the guardians of the galaxy holiday special','werewolf by night','she hulk attorney at law','i am groot','thor love and thunder','ms marvel','doctor strange in the multiverse of madness','moon knight','spider man no way home','hawkeye','eternals','shang chi and the legend of the ten rings','what if','black widow','loki','the falcon and the winter soldier','wandavision','spider man far from home','avengers endgame','captain marvel','ant man and the wasp','avengers infinity war','black panther','thor ragnarok','spider man homecoming','the guardians of the galaxy vol 2','doctor strange','captain america civil war','ant man','avengers age of ultron','the guardians of the galaxy','captain america the winter soldier','thor the dark world','iron man 3','the avengers','captain america the first avenger','thor','iron man 2','the incredible hulk','iron man']
-year=['23','23','23','22','22','22','22','22','22','22','22','22','21','21','21','21','21','21','21','21','21','19','19','19','18','18','18','17','17','17','16','16','15','15','14','14','13','13','12','11','11','10','08','08']
+title=['obi wan kenobi','the book of boba fett','star wars visions','star wars the bad batch','star wars the rise of skywalker','the mandalorian','solo a star wars story','star wars the last jedi','rogue one a star wars story','star wars the force awakens','star wars rebels','star wars the clone wars','star wars revenge of the sith','star wars attack of the clones','star wars the phantom menace','star wars return of the jedi','star wars the empire strikes back','star wars a new hope']
+year=['22','21','21','21','19','19','18','17','16','15','14','08','05','02','99','83','80','77']
 
 for i in range(0,len(title)):
     if int(year[i]) > 0 and int(year[i]) < 25:
@@ -19,29 +19,14 @@ def firstUpper(title):
     str = str.replace('At ','at ')
     str = str.replace('By ','by ')
     str = str[0].upper() + str[slice(1,len(str))]
-    return str;
-print('            <div id="mainCent">')
-for i in range(0,int(len(title)/6)):
-    print('                <div class="mediaRow">')
-    for j in range(0,6):
-        print('                    <div class="mediaEle">')
-        print('                        <div class="mediaPicOut"><a href="/video/',title[k].replace(' ','-'),'-',year[k],'.html"><img class="mediaPic" src="/media/video/',title[k].replace(' ','-'),'-',year[k],'.webp"></img></a></div>',sep='')
-        print('                        <a href="/video/',title[k].replace(' ','-'),'-',year[k],'.html" class="mediaTit">',firstUpper(title[k]),'</a>',sep='')
-        print('                        <p class="mediaYear">( ',year[k],' )</p>',sep='')
-        print('                    </div>')
-        k=k+1
+    return str
+print('            <div id="mediaEleCont">')
+for i in range(0,int(len(title))):
+    print('                <div class="mediaEle">')
+    print('                    <div class="mediaPicOut"><a href="/VERTE.IO/video/',title[i].replace(' ','-'),'-',year[i],'.html"><img class="mediaPic" src="/VERTE.IO/media/video/',title[i].replace(' ','-'),'-',year[i],'.webp"></img></a></div>',sep='')
+    print('                    <a href="/VERTE.IO/video/',title[i].replace(' ','-'),'-',year[i],'.html" class="mediaTit">',firstUpper(title[i]),'</a>',sep='')
+    print('                    <p class="mediaYear">( ',year[i],' )</p>',sep='')
     print('                </div>')
-if len(title)%6!=0:
-    print('                <div class="mediaRow">')
-    for j in range(0,len(title)%6):
-        print('                    <div class="mediaEle">')
-        print('                        <div class="mediaPicOut"><a href="/video/',title[k].replace(' ','-'),'-',year[k],'.html"><img class="mediaPic" src="/media/video/',title[k].replace(' ','-'),'-',year[k],'.webp"></img></a></div>',sep='')
-        print('                        <a href="/video/',title[k].replace(' ','-'),'-',year[k],'.html" class="mediaTit">',firstUpper(title[k]),'</a>',sep='')
-        print('                        <p class="mediaYear">( ',year[k],' )</p>',sep='')
-        print('                    </div>')
-        k=k+1
-    for j in range(0,6-(len(title)%6)):
-        print('                    <div class="mediaEleBlank"></div>')
-    print('                </div>')
+    k=k+1
 print('            </div>')
 print()

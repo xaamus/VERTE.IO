@@ -1,8 +1,7 @@
-$cusColor3: #fa9b52;
-$cusColor4: #f49dac;
-$cusColor33: #fa9b52dd;
-$cusColor44: #f49dacdd;
-
+$cusColor3: #9237e2;
+$cusColor4: #e542e7;
+$cusColor33: #9237e2dd;
+$cusColor44: #e542e7dd;
 #navSearchEle{
     background-color: unset;
     color: unset;
@@ -23,7 +22,6 @@ $cusColor44: #f49dacdd;
 }
 .episodeEle:hover{
     background: linear-gradient(90deg, $cusColor3 0%, $cusColor4 100%);
-    padding-top: .4rem;
 }
 .mediaPicOut,.mediaPicFrOut,#videoPicOut,#header,#iframeOut{
     background: linear-gradient(135deg, $cusColor3 0%, $cusColor4 40%, $cusColor4 60%, $cusColor3 100%);

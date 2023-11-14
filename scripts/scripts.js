@@ -38,12 +38,10 @@ setInterval(function(){
 //zmniejsza margines strony
 setInterval(function(){
     if (innerWidth > 1100){
-        mainCent.style.width = '80%';
         headerCent.style.width = '80%';
         footerCent.style.width = '80%';
     }
     else{
-        mainCent.style.width = '90%';
         headerCent.style.width = '95%';
         footerCent.style.width = '95%';
     }

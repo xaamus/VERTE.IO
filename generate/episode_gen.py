@@ -20,7 +20,7 @@ def firstUpper(episode):
     str = str.replace('At ','at ')
     str = str.replace('By ','by ')
     str = str[0].upper() + str[slice(1,len(str))]
-    return str;
+    return str
 print()
 print()
 print('<div id="seasonList">')
