@@ -9,8 +9,8 @@
 }
 
 #header, #footer {
-  border-top: solid 0.1rem rgba(52, 52, 52, 0.3333333333);
-  border-bottom: solid 0.1rem rgba(52, 52, 52, 0.3333333333);
+  border-top: solid 4px rgba(52, 52, 52, 0.3333333333);
+  border-bottom: solid 4px rgba(52, 52, 52, 0.3333333333);
 }
 
 #goUp {
@@ -19,7 +19,7 @@
 }
 
 .mediaPicOut, .mediaPicFrOut, #videoPicOut, #iframeId {
-  box-shadow: 0 0 0.6rem 0.2rem rgba(52, 52, 52, 0.3333333333);
+  box-shadow: 0 0 16px 2px rgba(52, 52, 52, 0.3333333333);
 }
 
 .episodeEle:hover {
@@ -35,7 +35,7 @@
 }
 
 #navSearchEle {
-  border: solid 0.2rem rgba(52, 52, 52, 0.3333333333);
+  border: solid 4px rgba(52, 52, 52, 0.3333333333);
 }
 
 #navSearchEle {
@@ -43,12 +43,12 @@
   color: #343434;
 }
 
-::-moz-placeholder {
+#navSearchEle::-moz-placeholder {
   color: #343434;
   opacity: 0.6;
 }
 
-::placeholder {
+#navSearchEle::placeholder {
   color: #343434;
   opacity: 0.6;
 }
@@ -60,19 +60,19 @@
 #navThemeEle {
   color: #343434;
   background-color: rgba(52, 52, 52, 0.3333333333);
-  border: #343434 solid 0.2rem;
+  border: #343434 solid 4px;
 }
 
 #navThemeEle:hover {
   color: #f1ecec;
   background-color: rgba(241, 236, 236, 0.4);
-  border: #f1ecec solid 0.3rem;
+  border: #f1ecec solid 4px;
 }
 
 .episodeEle {
-  border-top: solid 0.2rem rgba(52, 52, 52, 0.3333333333);
+  border-top: solid 3px rgba(52, 52, 52, 0.3333333333);
 }
 
 .getName, .getOther, .getButton {
-  border: solid 0.3rem rgba(52, 52, 52, 0.3333333333);
+  border: solid 4px rgba(52, 52, 52, 0.3333333333);
 }/*# sourceMappingURL=thlite.css.map */

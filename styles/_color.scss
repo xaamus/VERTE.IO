@@ -7,7 +7,7 @@ $cusColor44: #e542e7dd;
     color: unset;
 }
 .mediaPicFrOut:hover,.mediaPicOut:hover{
-    box-shadow: 0 0 1rem .2rem $cusColor3;
+    box-shadow: 0 0 16px 4px $cusColor3;
     color: $cusColor3;
     border: none;
 }
@@ -33,5 +33,5 @@ $cusColor44: #e542e7dd;
     background: linear-gradient(135deg, $cusColor4 0%, $cusColor3 100%);
 }
 .seasonInfo{
-    border-top: solid .4rem $cusColor3;
+    border-top: solid 6px $cusColor3;
 }

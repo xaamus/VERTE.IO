@@ -1,106 +1,95 @@
 #videoAsideL{
     float: left;
     width: 50%;
+    #videoInfo{
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        #videoPicOut{
+            height: 400px;
+            aspect-ratio: 39/58;
+            border-radius: 40px;
+            padding: 8px;
+            #videoPic{
+                width: 100%;
+                height: 100%;
+                border-radius: 32px;
+            }
+        }
+        #videoDet{
+            width: 60%;
+            line-height: 26px;
+            p{
+                margin-bottom: 16px;
+                text-align: justify;
+            }
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+    #seasonList{
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 20px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        .seasonInfo{
+            padding: 16px 0;
+            transition: .2s color;
+            display: flex;
+            justify-content: space-between;
+            .seasonTit{
+                letter-spacing: 4px;
+                font-size: 24px;
+            }
+            .seasonArr{
+                font-size: 36px;
+                line-height: 0;
+                display: flex;
+                align-items: center;
+                transform: rotate(90deg);
+            }
+        }
+        .episodeList{
+            text-align: center;
+            display: none;
+            .episodeEle{
+                line-height: 48px;
+                display: flex;
+                letter-spacing: 2px;
+                .episodeOvr{
+                    width: 10%;
+                }
+                .episodeSea{
+                    width: 13%;
+                }
+                .episodeTit{
+                    width: 77%;
+                }
+            }
+        }
+    }
 }
 #videoAsideR{
     width: 50%;
     float: right;
     justify-content: flex-end;
     display: flex;
-}
-#videoWatch{
-    width: 90%;
-}
-#videoWatchTitle{
-    text-align: center;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-}
-#iframeOut{
-    width: 100%;
-    display: flex;
-    border-radius: 2.2rem;
-    justify-content: center;
-    align-items: center;
-    padding: .4rem;
-    height: 25rem;
-    #iframeId{
-        border-radius: 2rem;
-        border: none;
-        height: 100%;
-        width: 100%;
-    }
-}
-#videoInfo{
-    font-size: 1.2rem;
-}
-#videoPicOut{
-    width: 38%;
-    float: left;
-    border-radius: 2.2rem;
-    padding: .4rem;
-}
-#videoPic{
-    width: 100%;
-    border-radius: 2rem;
-    margin-bottom: -.3rem;
-}
-#videoDet{
-    width: 62%;
-    line-height: 1.8rem;
-    padding: 0 2rem;
-    float: right;
-    p{
-        margin-bottom: 1rem;
-    }
-    p:nth-child(4){
-        text-align: justify;
-    }
-    span{
-        font-weight: bold;
-    }
-}
-#seasonList{
-    padding-top: 4rem;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    clear: both;
-    margin-bottom: 4rem;
-}
-.seasonInfo{
-    padding: 1rem 0;
-    transition: .2s;
-    .seasonTit{
-        letter-spacing: .2rem;
-        font-size: 1.6rem;
-    }
-    .seasonArr{
-        font-size: 2rem;
-        float: right;
-        margin-right: 1rem;
-        line-height: 0rem;
-        margin-top: .8rem;
-    }
-}
-.episodeList{
-    text-align: center;
-    display: none;
-    .episodeEle{
-        line-height: 3rem;
-        display: flex;
-        letter-spacing: .1rem;
-        .episodeOvr{
-            width: 10%;
-        }
-        .episodeSea{
-            width: 13%;
-        }
-        .episodeTit{
-            width: 77%;
+    #videoWatch{
+        width: 90%;
+        #iframeOut{
+            width: 100%;
+            display: flex;
+            border-radius: 40px;
+            padding: 8px;
+            aspect-ratio: 16/9;
+            #iframeId{
+                border-radius: 32px;
+                border: none;
+                height: 100%;
+                width: 100%;
+            }
         }
     }
-}
-#episodeList1{
-    display: unset;
 }

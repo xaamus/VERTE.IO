@@ -11,15 +11,14 @@
         margin-bottom: 40px;
         .mediaPicOut{
             width: 80%;
-            border-radius: 2.2rem;
+            border-radius: 40px;
             transition: 1s;
-            margin-bottom: 1rem;
-            padding: .3rem;
+            margin-bottom: 14px;
+            padding: 6px;
             .mediaPic{
                 width: 100%;
                 height: 100%;
-                border-radius: 1.9rem;
-                background-position: center;
+                border-radius: 34px;
             }
         }
         .mediaPicOut:hover{
@@ -27,19 +26,9 @@
             transform: scale(1.04);
         }
         .mediaYear{
-            font-size: .8rem;
-            line-height: 1.6rem;
+            line-height: 20px;
             font-style: italic;
-            letter-spacing: .1rem;
-            animation: mediaYear 2s infinite;
-        }
-        @keyframes mediaYear{
-            0%,100%{
-                transform: rotate(1deg);
-            }
-            50%{
-                transform: rotate(-1deg);
-            }
+            letter-spacing: 2px;
         }
     }
 }
@@ -69,7 +58,6 @@
             }
             .mediaPicFr:hover{
                 animation: mediaPicFr 10s;
-                //filter: grayscale(0) !important;
             }
         }
         .mediaPicFrOut:hover{

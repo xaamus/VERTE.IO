@@ -12,15 +12,15 @@ $cusColor22: #f1ecec66;
     color: unset;
 }
 #header,#footer{
-    border-top: solid .1rem $cusColor22;
-    border-bottom: solid .1rem $cusColor22;
+    border-top: solid 4px $cusColor22;
+    border-bottom: solid 4px $cusColor22;
 }
 #goUp{
     background-color: transparent;
     color: $cusColor2;
 }
 .mediaPicOut,.mediaPicFrOut,#videoPicOut,#iframeId{
-    box-shadow: 0 0 .6rem .2rem $cusColor22;
+    box-shadow: 0 0 16px 2px $cusColor22;
 }
 .episodeEle:hover{
     color: $cusColor1;
@@ -32,13 +32,13 @@ $cusColor22: #f1ecec66;
     background-color: $cusColor2;
 }
 #navSearchEle{
-    border: solid .2rem $cusColor22;
+    border: solid 4px $cusColor22;
 }
 #navSearchEle{
     background: $cusColor22;
     color: $cusColor2;
 }
-::placeholder{
+#navSearchEle::placeholder{
     color: $cusColor2;
     opacity: .6;
 }
@@ -48,16 +48,16 @@ $cusColor22: #f1ecec66;
 #navThemeEle{
     color: $cusColor2;
     background-color: $cusColor22;
-    border: $cusColor2 solid .2rem;
+    border: $cusColor2 solid 4px;
 }
 #navThemeEle:hover{
     color: $cusColor1;
     background-color: $cusColor11;
-    border: $cusColor1 solid .3rem;
+    border: $cusColor1 solid 4px;
 }
 .episodeEle{
-    border-top: solid .2rem $cusColor22;
+    border-top: solid 3px $cusColor22;
 }
 .getName,.getOther,.getButton{
-    border: solid .3rem $cusColor22;
+    border: solid 4px $cusColor22;
 }

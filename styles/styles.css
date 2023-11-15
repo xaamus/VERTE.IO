@@ -4,7 +4,7 @@
 }
 
 .mediaPicFrOut:hover, .mediaPicOut:hover {
-  box-shadow: 0 0 1rem 0.2rem #9237e2;
+  box-shadow: 0 0 16px 4px #9237e2;
   color: #9237e2;
   border: none;
 }
@@ -38,7 +38,7 @@
 }
 
 .seasonInfo {
-  border-top: solid 0.4rem #9237e2;
+  border-top: solid 6px #9237e2;
 }
 
 * {
@@ -286,35 +286,24 @@ a {
 }
 #mediaEleCont .mediaEle .mediaPicOut {
   width: 80%;
-  border-radius: 2.2rem;
+  border-radius: 40px;
   transition: 1s;
-  margin-bottom: 1rem;
-  padding: 0.3rem;
+  margin-bottom: 14px;
+  padding: 6px;
 }
 #mediaEleCont .mediaEle .mediaPicOut .mediaPic {
   width: 100%;
   height: 100%;
-  border-radius: 1.9rem;
-  background-position: center;
+  border-radius: 34px;
 }
 #mediaEleCont .mediaEle .mediaPicOut:hover {
   transition: 0.2s;
   transform: scale(1.04);
 }
 #mediaEleCont .mediaEle .mediaYear {
-  font-size: 0.8rem;
-  line-height: 1.6rem;
+  line-height: 20px;
   font-style: italic;
-  letter-spacing: 0.1rem;
-  animation: mediaYear 2s infinite;
-}
-@keyframes mediaYear {
-  0%, 100% {
-    transform: rotate(1deg);
-  }
-  50% {
-    transform: rotate(-1deg);
-  }
+  letter-spacing: 2px;
 }
 
 #mediaFraCont {
@@ -369,6 +358,75 @@ a {
   float: left;
   width: 50%;
 }
+#videoAsideL #videoInfo {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#videoAsideL #videoInfo #videoPicOut {
+  height: 400px;
+  aspect-ratio: 39/58;
+  border-radius: 40px;
+  padding: 8px;
+}
+#videoAsideL #videoInfo #videoPicOut #videoPic {
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+}
+#videoAsideL #videoInfo #videoDet {
+  width: 60%;
+  line-height: 26px;
+}
+#videoAsideL #videoInfo #videoDet p {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+#videoAsideL #videoInfo #videoDet span {
+  font-weight: bold;
+}
+#videoAsideL #seasonList {
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+#videoAsideL #seasonList .seasonInfo {
+  padding: 16px 0;
+  transition: 0.2s color;
+  display: flex;
+  justify-content: space-between;
+}
+#videoAsideL #seasonList .seasonInfo .seasonTit {
+  letter-spacing: 4px;
+  font-size: 24px;
+}
+#videoAsideL #seasonList .seasonInfo .seasonArr {
+  font-size: 36px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  transform: rotate(90deg);
+}
+#videoAsideL #seasonList .episodeList {
+  text-align: center;
+  display: none;
+}
+#videoAsideL #seasonList .episodeList .episodeEle {
+  line-height: 48px;
+  display: flex;
+  letter-spacing: 2px;
+}
+#videoAsideL #seasonList .episodeList .episodeEle .episodeOvr {
+  width: 10%;
+}
+#videoAsideL #seasonList .episodeList .episodeEle .episodeSea {
+  width: 13%;
+}
+#videoAsideL #seasonList .episodeList .episodeEle .episodeTit {
+  width: 77%;
+}
 
 #videoAsideR {
   width: 50%;
@@ -376,112 +434,21 @@ a {
   justify-content: flex-end;
   display: flex;
 }
-
-#videoWatch {
+#videoAsideR #videoWatch {
   width: 90%;
 }
-
-#videoWatchTitle {
-  text-align: center;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-}
-
-#iframeOut {
+#videoAsideR #videoWatch #iframeOut {
   width: 100%;
   display: flex;
-  border-radius: 2.2rem;
-  justify-content: center;
-  align-items: center;
-  padding: 0.4rem;
-  height: 25rem;
+  border-radius: 40px;
+  padding: 8px;
+  aspect-ratio: 16/9;
 }
-#iframeOut #iframeId {
-  border-radius: 2rem;
+#videoAsideR #videoWatch #iframeOut #iframeId {
+  border-radius: 32px;
   border: none;
   height: 100%;
   width: 100%;
-}
-
-#videoInfo {
-  font-size: 1.2rem;
-}
-
-#videoPicOut {
-  width: 38%;
-  float: left;
-  border-radius: 2.2rem;
-  padding: 0.4rem;
-}
-
-#videoPic {
-  width: 100%;
-  border-radius: 2rem;
-  margin-bottom: -0.3rem;
-}
-
-#videoDet {
-  width: 62%;
-  line-height: 1.8rem;
-  padding: 0 2rem;
-  float: right;
-}
-#videoDet p {
-  margin-bottom: 1rem;
-}
-#videoDet p:nth-child(4) {
-  text-align: justify;
-}
-#videoDet span {
-  font-weight: bold;
-}
-
-#seasonList {
-  padding-top: 4rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  clear: both;
-  margin-bottom: 4rem;
-}
-
-.seasonInfo {
-  padding: 1rem 0;
-  transition: 0.2s;
-}
-.seasonInfo .seasonTit {
-  letter-spacing: 0.2rem;
-  font-size: 1.6rem;
-}
-.seasonInfo .seasonArr {
-  font-size: 2rem;
-  float: right;
-  margin-right: 1rem;
-  line-height: 0rem;
-  margin-top: 0.8rem;
-}
-
-.episodeList {
-  text-align: center;
-  display: none;
-}
-.episodeList .episodeEle {
-  line-height: 3rem;
-  display: flex;
-  letter-spacing: 0.1rem;
-}
-.episodeList .episodeEle .episodeOvr {
-  width: 10%;
-}
-.episodeList .episodeEle .episodeSea {
-  width: 13%;
-}
-.episodeList .episodeEle .episodeTit {
-  width: 77%;
-}
-
-#episodeList1 {
-  display: unset;
 }
 
 #mediaEleVoid {

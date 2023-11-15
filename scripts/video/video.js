@@ -8,14 +8,9 @@ function seasonCol(){
         seasonArr[i].innerHTML='>';
     }
 }
+episodeList[0].style.display = 'unset';
 let videoWatchTitle = document.getElementById('videoWatchTitle');
 let episodeOvr = document.querySelectorAll('.episodeOvr');
 let episodeSea = document.querySelectorAll('.episodeSea');
 let episodeTit = document.querySelectorAll('.episodeTit');
 let episodeEle = document.querySelectorAll('.episodeEle');
-
-for (i=0;i<episodeEle.length;i++){
-    episodeEle[i].addEventListener('click',function(){
-        videoWatch.style.display = 'flex';
-    });
-}
