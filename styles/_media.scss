@@ -2,88 +2,94 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    .mediaEle{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+        .mediaPicOut{
+            width: 80%;
+            border-radius: 2.2rem;
+            transition: 1s;
+            margin-bottom: 1rem;
+            padding: .3rem;
+            .mediaPic{
+                width: 100%;
+                height: 100%;
+                border-radius: 1.9rem;
+                background-position: center;
+            }
+        }
+        .mediaPicOut:hover{
+            transition: .2s;
+            transform: scale(1.04);
+        }
+        .mediaYear{
+            font-size: .8rem;
+            line-height: 1.6rem;
+            font-style: italic;
+            letter-spacing: .1rem;
+            animation: mediaYear 2s infinite;
+        }
+        @keyframes mediaYear{
+            0%,100%{
+                transform: rotate(1deg);
+            }
+            50%{
+                transform: rotate(-1deg);
+            }
+        }
+    }
 }
-.mediaEle{
+
+
+#mediaFraCont{
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 40px;
-    .mediaPicOut{
-        width: 80%;
-        border-radius: 2.2rem;
-        transition: 1s transform;
-        margin-bottom: 1rem;
-        padding: .3rem;
-        .mediaPic{
-            width: 100%;
-            height: 100%;
-            border-radius: 1.9rem;
-            background-position: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .mediaEleFr{
+        width: 900px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+        .mediaPicFrOut{
+            border-radius: 40px;
+            transition: 1s;
+            padding: 8px;
+            margin-bottom: 16px;
+            height: 356px;
+            .mediaPicFr{
+                height: 100%;
+                width: 100%;
+                border-radius: 32px;
+                background-position: center;
+                transition: .5s;
+            }
+            .mediaPicFr:hover{
+                animation: mediaPicFr 10s;
+                //filter: grayscale(0) !important;
+            }
         }
-    }
-    .mediaPicOut:hover{
-        transition: .2s transform;
-        transform: scale(1.04);
-    }
-    .mediaYear{
-        font-size: .8rem;
-        line-height: 1.6rem;
-        font-style: italic;
-        letter-spacing: .1rem;
-        animation: mediaYear 2s infinite;
-    }
-    @keyframes mediaYear{
-        0%,100%{
-            transform: rotate(1deg);
+        .mediaPicFrOut:hover{
+            transform: scale(1.04);
+            transition: .2s;
         }
-        50%{
-            transform: rotate(-1deg);
+        .mediaTitFr{
+            font-size: 20px;
+            letter-spacing: 4px;
         }
-    }
-}
-
-
-.mediaEleFr{
-    width: 48%;
-    .mediaPicFrOut{
-        width: 70%;
-        border-radius: 2.2rem;
-        transition: 1s;
-        margin-bottom: 1rem;
-        padding: .4rem;
-        margin-bottom: 1.4rem;
-        height: 20rem;
-        .mediaPicFr{
-            height: 100%;
-            width: 100%;
-            border-radius: 2rem;
-            background-position: center;
-            transition: .5s;
-        }
-        .mediaPicFr:hover{
-            animation: mediaPicFr 10s;
-            //filter: grayscale(0) !important;
-        }
-    }
-    .mediaPicFrOut:hover{
-        transform: scale(1.05);
-        transition: .2s;
-    }
-    .mediaTitFr{
-        font-size: 1.4rem;
-        letter-spacing: .2rem;
-    }
-    @keyframes mediaPicFr{
-        10%,100%{
-            background-position: center;
-        }
-        40%{
-            background-position: left;
-        }
-        70%{
-            background-position: right;
+        @keyframes mediaPicFr{
+            10%,100%{
+                background-position: center;
+            }
+            40%{
+                background-position: left;
+            }
+            70%{
+                background-position: right;
+            }
         }
     }
 }

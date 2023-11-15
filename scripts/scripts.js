@@ -5,8 +5,8 @@ let footerCent = document.getElementById('footerCent');
 let headerCent = document.getElementById('headerCent');
 
 //przewija na górę strony
+let goUp = document.getElementById('goUp');
 setInterval(function(){
-    let goUp = document.getElementById('goUp');
     if(scrollY < (0.89 * window.innerHeight)){
         goUp.style.opacity = '40%';
         goUp.style.pointerEvents = 'none';
@@ -24,8 +24,8 @@ setInterval(function(){
 },1);
 
 //scroll personalizowany
+let scroll = document.getElementById('scroll').style;
 setInterval(function(){
-    let scroll = document.getElementById('scroll').style;
     if (innerHeight < (main.offsetHeight + 20)){
         scroll.height = ((innerHeight / main.offsetHeight) * 100) + "%";
     }
@@ -48,9 +48,9 @@ setInterval(function(){
 },1);
 
 //zmienia motyw
+let linkCSS = document.getElementById('linkCSS');
+let navThemeEle = document.getElementById('navThemeEle');
 setInterval(function(){
-    let linkCSS = document.getElementById('linkCSS');
-    let navThemeEle = document.getElementById('navThemeEle');
     if (navThemeEle.innerHTML == 'DARK'){
         navThemeEle.addEventListener('click',function(){
             linkCSS.href = '/VERTE.IO/styles/thlite.css';
@@ -67,7 +67,6 @@ setInterval(function(){
 
 //zmnienia przezroczystość przycisku motywu
 setInterval(function(){
-    let navThemeEle = document.getElementById('navThemeEle');
     if (scrollY > 100){
         navThemeEle.style.pointerEvents = 'none';
         for (i=100;i>40;i--){
@@ -83,8 +82,8 @@ setInterval(function(){
 },1);
 
 //animacja tytułu strony
+let navTitleEle = document.getElementById('navTitleEle');
 setInterval(function(){
-    let navTitleEle = document.getElementById('navTitleEle');
     if (innerWidth > 1100){
         navTitleEle.classList.add('navTitleEleHov');
     }

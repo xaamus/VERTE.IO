@@ -1,23 +1,49 @@
-function wide(row_elew){
-    let container = document.getElementById('mediaEleCont')
-    let row_ele = document.querySelectorAll('.mediaEle');
-    for (i=0;i<row_ele.length;i++){
-        row_ele[i].style.width = row_elew + 'px';
+function wide(mediaElew){
+    for (i=0;i<mediaEle.length;i++){
+        mediaEle[i].style.width = mediaElew + 'px';
     }
     var x = document.body.clientWidth;
     x = x - 0.05 * x;
     container.style.width = x + 'px';
     var y = x;
     let eleCount = 0;
-    while (x >= row_elew){
-        x = x - row_elew;
+    while (x >= mediaElew){
+        x = x - mediaElew;
         eleCount++;
-        if (x >= row_elew){
+        if (x >= mediaElew){
             x = x - 20;
         }
     }
-    let gap = (y - (row_elew * eleCount)) / (eleCount-1);
+    let gap = (y - (mediaElew * eleCount)) / (eleCount-1);
     container.style.columnGap = gap + 'px';
 }
 
-setInterval(wide,1,250)
+let container = document.getElementById('mediaEleCont')
+let mediaEle = document.querySelectorAll('.mediaEle');
+let mediaTit = document.querySelectorAll('.mediaTit');
+let mediaYear = document.querySelectorAll('.mediaYear');
+
+setInterval(()=>{
+    if (document.body.clientWidth < 548){
+        for (i=0;i<mediaEle.length;i++){
+            wide(160);
+        }
+        for (i=0;i<mediaTit.length;i++){
+            mediaTit[i].style.fontSize = '.9rem'
+        }
+        for (i=0;i<mediaYear.length;i++){
+            mediaYear[i].style.fontSize = '.7rem'
+        }
+    }
+    else if (document.body.clientWidth >= 548){
+        for (i=0;i<mediaEle.length;i++){
+            wide(250);
+        }
+        for (i=0;i<mediaTit.length;i++){
+            mediaTit[i].style.fontSize = '1rem'
+        }
+        for (i=0;i<mediaYear.length;i++){
+            mediaYear[i].style.fontSize = '.8rem'
+        }
+    }
+},1)

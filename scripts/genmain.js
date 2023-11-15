@@ -5,43 +5,17 @@ let franchises = [
 ];
 let mediaPicFr = document.querySelectorAll('.mediaPicFr');
 let mediaPicFrOut = document.querySelectorAll('.mediaPicFrOut');
+let mediaEleFr = document.querySelectorAll('.mediaEleFr');
 
-//drukuje
-setInterval(function(){
-    k=0;
-    contentMediaFranch = '';
-    if (innerWidth>1100){
-        for (i=0;i<8;i++){
-            contentMediaFranch += '<div class="mediaRowFr">';
-            for(j=0;j<2;j++){
-                contentMediaFranch += '<div class="mediaEleFr"><div class="mediaPicFrOut"><a href="/VERTE.IO/franchise/'+franchises[k]+'.html"><div class="mediaPicFr" id="picFr'+(k+1)+'"></div></a></div><a class="mediaTitFr" href="/VERTE.IO/franchise/'+franchises[k]+'.html">'+franchises[k].replaceAll('-',' ').toUpperCase()+'</a></div>';
-                k=k+1;
-            }
-            contentMediaFranch += '</div>';
+setInterval(()=>{
+    if (document.body.clientWidth < 1000){
+        for (i=0;i<mediaEleFr.length;i++){
+            mediaEleFr[i].style.width = '90%'
         }
     }
-    else{
-        for (i=0;i<16;i++){
-            contentMediaFranch += '<div class="mediaRowFr">';
-            contentMediaFranch += '<div class="mediaEleFr" style="width:100%"><div class="mediaPicFrOut"><a href="/VERTE.IO/franchise/'+franchises[k]+'.html"><div class="mediaPicFr" id="picFr'+(k+1)+'"></div></a></div><a class="mediaTitFr" href="/VERTE.IO/franchise/'+franchises[k]+'.html">'+franchises[k].replaceAll('-',' ').toUpperCase()+'</a></div>';
-            k=k+1;
-            contentMediaFranch += '</div>';
+    else if (document.body.clientWidth >= 1000){
+        for (i=0;i<mediaEleFr.length;i++){
+            mediaEleFr[i].style.width = '900px'
         }
     }
-    if (mainCent.innerHTML != contentMediaFranch){
-        mainCent.innerHTML = contentMediaFranch;
-    }
-},1);
-//poszarza nieaktywne (hover) elementy franczyzy
-/*for (i=0;i<mediaPicFrOut.length;i++){
-    mediaPicFrOut[i].addEventListener('mouseover',function(){
-        for (j=0;j<mediaPicFr.length;j++){
-            mediaPicFr[j].style.filter = 'grayscale(.6)';
-        }
-    })
-    mediaPicFrOut[i].addEventListener('mouseleave',function(){
-        for (j=0;j<mediaPicFr.length;j++){
-            mediaPicFr[j].style.filter = 'grayscale(0)';
-        }
-    })
-}*/
+},1)
