@@ -23,13 +23,13 @@ $cusColor44: #e542e7dd;
 .episodeEle:hover{
     background: linear-gradient(90deg, $cusColor3 0%, $cusColor4 100%);
 }
-.mediaPicOut,.mediaPicFrOut,#videoPicOut,#header,#iframeOut{
+.mediaPicOut,.mediaPicFrOut,#videoPicOut,header,#iframeOut{
     background: linear-gradient(135deg, $cusColor3 0%, $cusColor4 40%, $cusColor4 60%, $cusColor3 100%);
 }
-#header{
+header{
     background: linear-gradient(135deg, $cusColor3 0%, $cusColor4 100%);
 }
-#footer{
+footer{
     background: linear-gradient(135deg, $cusColor4 0%, $cusColor3 100%);
 }
 .seasonInfo{

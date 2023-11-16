@@ -7,6 +7,10 @@ let mediaPicFr = document.querySelectorAll('.mediaPicFr');
 let mediaPicFrOut = document.querySelectorAll('.mediaPicFrOut');
 let mediaEleFr = document.querySelectorAll('.mediaEleFr');
 
+for (i=0;i<mediaPicFr.length;i++){
+    mediaPicFr[i].style.backgroundImage = 'url(/VERTE.IO/media/franchise/' + franchises[i] + '.webp)'
+}
+
 setInterval(()=>{
     if (document.body.clientWidth < 1000){
         for (i=0;i<mediaEleFr.length;i++){

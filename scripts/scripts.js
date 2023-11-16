@@ -1,6 +1,5 @@
-let main = document.getElementById('main');
-let header = document.getElementById('header');
-let mainCent = document.getElementById('mainCent');
+let main = document.querySelector('#main');
+let header = document.querySelector("header");
 let footerCent = document.getElementById('footerCent');
 let headerCent = document.getElementById('headerCent');
 

@@ -25,15 +25,15 @@
   background: linear-gradient(90deg, #9237e2 0%, #e542e7 100%);
 }
 
-.mediaPicOut, .mediaPicFrOut, #videoPicOut, #header, #iframeOut {
+.mediaPicOut, .mediaPicFrOut, #videoPicOut, header, #iframeOut {
   background: linear-gradient(135deg, #9237e2 0%, #e542e7 40%, #e542e7 60%, #9237e2 100%);
 }
 
-#header {
+header {
   background: linear-gradient(135deg, #9237e2 0%, #e542e7 100%);
 }
 
-#footer {
+footer {
   background: linear-gradient(135deg, #e542e7 0%, #9237e2 100%);
 }
 
@@ -54,28 +54,25 @@
   color: unset;
 }
 
-#body {
+body {
   overflow-x: hidden;
 }
-#body #headerCent, #body #footerCent {
+body #headerCent, body #footerCent {
   width: 80%;
   margin: auto;
-}
-#body #headerCent, #body #footerCent {
   display: flex;
-  font-size: 1.2rem;
+  font-size: 20px;
 }
 
 a {
   transition: 0.2s;
 }
 
-#header {
-  letter-spacing: 0.4rem;
+header {
+  letter-spacing: 5px;
   width: 100%;
-  height: 6rem;
+  height: 100px;
   position: fixed;
-  padding: 1rem 0;
   z-index: 1;
   font-weight: bold;
   text-align: center;
@@ -107,44 +104,41 @@ a {
   }
 }
 #main {
-  padding-top: 10rem;
+  padding-top: 140px;
   display: flex;
   justify-content: center;
 }
 
-#footer {
-  letter-spacing: 0.2rem;
+footer {
+  letter-spacing: 3px;
   font-weight: bold;
-  padding: 2rem 0;
-  clear: both;
   width: 100%;
-  height: 6rem;
+  height: 90px;
   display: flex;
 }
 
 #goUp {
-  bottom: 2.4rem;
-  right: 4rem;
+  bottom: 34px;
+  right: 40px;
   position: fixed;
-  transform: scale(3.6);
+  transform: scale(3);
 }
 
 #goUp:hover {
-  transform: scale(4);
+  transform: scale(3.2);
 }
 
 #navTheme {
   width: 18%;
-  height: 3rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 1.2rem;
+  font-size: 20px;
 }
 #navTheme #navThemeEle {
-  border-radius: 2rem;
-  height: 2.5rem;
-  width: 8rem;
+  border-radius: 20px;
+  height: 40px;
+  width: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -152,23 +146,20 @@ a {
 }
 
 #navTitle {
-  font-size: 2.2rem;
-  display: flex;
+  font-size: 35px;
   width: 30%;
-  height: 3rem;
+  display: flex;
   justify-content: flex-start;
 }
 #navTitle #navTitleEle {
-  transition: 0.4s;
+  transition: 0.4s letter-spacing transform;
 }
 #navTitle .navTitleEleHov:hover {
-  letter-spacing: 0.6rem;
-  transform: translateX(0.3rem);
+  letter-spacing: 10px;
 }
 
 #navSearch {
   width: 52%;
-  height: 3rem;
   display: flex;
   align-items: center;
 }
@@ -176,15 +167,15 @@ a {
   width: 100%;
 }
 #navSearch #navSearchEle {
-  font-size: 1.2rem;
-  height: 2.6rem;
+  font-size: 20px;
+  height: 40px;
   width: 80%;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 20px;
   text-transform: uppercase;
   font-weight: unset;
-  letter-spacing: 0.2rem;
-  border-radius: 2rem;
+  letter-spacing: 3px;
+  border-radius: 32px;
   transition: 0.4s;
 }
 #navSearch #navSearchEle:focus {
@@ -201,74 +192,6 @@ a {
 
 ::-webkit-scrollbar {
   width: 0;
-}
-
-#picFr1 {
-  background-image: url(/VERTE.IO/media/franchise/marvel.webp);
-}
-
-#picFr2 {
-  background-image: url(/VERTE.IO/media/franchise/star-wars.webp);
-}
-
-#picFr3 {
-  background-image: url(/VERTE.IO/media/franchise/pixar.webp);
-}
-
-#picFr4 {
-  background-image: url(/VERTE.IO/media/franchise/dreamworks.webp);
-}
-
-#picFr5 {
-  background-image: url(/VERTE.IO/media/franchise/disney.webp);
-}
-
-#picFr6 {
-  background-image: url(/VERTE.IO/media/franchise/illumination.webp);
-}
-
-#picFr7 {
-  background-image: url(/VERTE.IO/media/franchise/dc-comics.webp);
-}
-
-#picFr8 {
-  background-image: url(/VERTE.IO/media/franchise/x-men.webp);
-}
-
-#picFr9 {
-  background-image: url(/VERTE.IO/media/franchise/fast-and-furious.webp);
-}
-
-#picFr10 {
-  background-image: url(/VERTE.IO/media/franchise/transformers.webp);
-}
-
-#picFr11 {
-  background-image: url(/VERTE.IO/media/franchise/harry-potter.webp);
-}
-
-#picFr12 {
-  background-image: url(/VERTE.IO/media/franchise/lord-of-the-rings.webp);
-}
-
-#picFr13 {
-  background-image: url(/VERTE.IO/media/franchise/blue-sky.webp);
-}
-
-#picFr14 {
-  background-image: url(/VERTE.IO/media/franchise/sony-pictures.webp);
-}
-
-#picFr15 {
-  background-image: url(/VERTE.IO/media/franchise/nickelodeon.webp);
-}
-
-#picFr16 {
-  background-image: url(/VERTE.IO/media/franchise/cartoon-network.webp);
-}
-
-#picFr99 {
-  background-image: url(/VERTE.IO/media/franchise/void.webp);
 }
 
 #mediaEleCont {
@@ -451,53 +374,55 @@ a {
   width: 100%;
 }
 
-#mediaEleVoid {
-  width: 100%;
+.voidPic {
+  background-image: url(/VERTE.IO/media/franchise/void.webp);
+}
+
+#godCont {
+  width: 900px;
 }
 
 #godType {
-  border-radius: 2rem;
-  width: 80%;
+  border-radius: 30px;
   display: flex;
   font-weight: bold;
-  margin: auto;
   text-align: center;
 }
 
 .godTypeEle, .godTypeEleActive {
-  height: 3.6rem;
+  height: 60px;
   width: 20%;
-  font-size: 1.6rem;
+  font-size: 26px;
   transition: 0.4s;
   display: grid;
   align-items: center;
 }
 
 .godTypeEleActive, .godTypeEle:hover {
-  font-size: 1.8rem;
+  font-size: 28px;
 }
 
 .godTypeEle:nth-of-type(1) {
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
 }
 
 .godTypeEle:nth-of-type(5) {
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 #generateField {
-  margin-top: 4rem;
+  margin-top: 60px;
   text-align: center;
 }
 
 #generateField input {
-  border-radius: 1.6rem;
-  margin-bottom: 1rem;
-  line-height: 2.6rem;
-  padding: 0.2rem 1rem;
-  font-size: 1.4rem;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  line-height: 46px;
+  padding: 0 20px;
+  font-size: 22px;
   text-transform: uppercase;
   text-align: center;
   font-family: unset;
@@ -506,7 +431,7 @@ a {
 }
 
 #generateField input:hover {
-  letter-spacing: 0.2rem;
+  letter-spacing: 1px;
 }
 
 .getName {

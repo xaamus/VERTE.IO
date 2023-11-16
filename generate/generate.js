@@ -1,11 +1,11 @@
-var generateField = document.getElementById('generateField');
-var godTypeEle = document.querySelectorAll('.godTypeEle')
+let generateField = document.getElementById('generateField');
+let godTypeEle = document.querySelectorAll('.godTypeEle')
 function getformName(){
-    var formName = document.getElementById('formName').value.slice(0,-5);
-    var formYear = formName.slice(-4);
+    let formName = document.getElementById('formName').value.slice(0,-5);
+    let formYear = formName.slice(-4);
 }
 function godTypeEleAttr(){
-    for (var i=0;i<5;i++){
+    for (let i=0;i<5;i++){
         godTypeEle[i].setAttribute('class','godTypeEle');
     }
 }
@@ -19,7 +19,16 @@ godTypeEle[4].addEventListener('click',getEpisode);
 function getVoid(){
     godTypeEleAttr();
     godTypeEle[0].setAttribute('class','godTypeEleActive godTypeEle');
-    generateField.innerHTML = '<div class="mediaRowFr"><div id="mediaEleVoid"><div class="mediaPicFrOut"><a href="/VERTE.IO/franchise/void.html"><div class="mediaPicFr" id="picFr99"></div></a></div><a class="mediaTitFr" href="/VERTE.IO/franchise/void.html">VOID</a></div></div>';
+    generateField.innerHTML = '<div id="mediaFraCont"><div class="mediaEleFr"><div class="mediaPicFrOut"><a href="/VERTE.IO/franchise/void.html"><div class="mediaPicFr voidPic"></div></a></div><a class="mediaTitFr" href="/VERTE.IO/franchise/void.html">VOID</a></div></div>';
+    let mediaEleFr = document.querySelectorAll('.mediaEleFr');
+    setInterval(()=>{
+        if (document.body.clientWidth < 1000){
+            mediaEleFr[0].style.width = '90%';
+        }
+        else if (document.body.clientWidth >= 1000){
+            mediaEleFr[0].style.width = '900px';
+        }
+    },1)
 }
 function getInfo(){
     godTypeEleAttr();
@@ -43,14 +52,14 @@ function getEpisode(){
 }
 
 function getInfoSub(){
-    var formName = document.getElementById('formName').value.slice(0,-5);
-    var formYear = formName.slice(-4);
+    let formName = document.getElementById('formName').value.slice(0,-5);
+    let formYear = formName.slice(-4);
 }
 function getFranchiseSub(){
-    var formName = document.getElementById('formName').value.toLowerCase().replaceAll(' ','-');
+    let formName = document.getElementById('formName').value.toLowerCase().replaceAll(' ','-');
 }
 function getScriptSub(){
-    var formName = document.getElementById('formName').value.toLowerCase().replaceAll(' ','-');
-    var formSeasons = document.getElementById('formSeasons').value;
-    var formEpisodes = document.getElementById('formEpisodes').value;
+    let formName = document.getElementById('formName').value.toLowerCase().replaceAll(' ','-');
+    let formSeasons = document.getElementById('formSeasons').value;
+    let formEpisodes = document.getElementById('formEpisodes').value;
 }

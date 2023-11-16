@@ -1,4 +1,4 @@
-#body {
+body {
   background-color: #f1ecec;
   color: #343434;
 }
@@ -8,7 +8,7 @@
   color: unset;
 }
 
-#header, #footer {
+header, footer {
   border-top: solid 4px rgba(52, 52, 52, 0.3333333333);
   border-bottom: solid 4px rgba(52, 52, 52, 0.3333333333);
 }

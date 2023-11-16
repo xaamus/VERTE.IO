@@ -3,7 +3,7 @@ $cusColor2: #f1ecec;
 $cusColor11: #34343455;
 $cusColor22: #f1ecec66;
 
-#body{
+body{
     background-color: $cusColor1;
     color: $cusColor2;
 }
@@ -11,7 +11,7 @@ $cusColor22: #f1ecec66;
     background-color: transparent;
     color: unset;
 }
-#header,#footer{
+header,footer{
     border-top: solid 4px $cusColor22;
     border-bottom: solid 4px $cusColor22;
 }
