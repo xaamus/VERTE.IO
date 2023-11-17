@@ -9,7 +9,7 @@
   border: none;
 }
 
-#main a:hover:not(.episodeEle, .mediaTitFr, .mediaTit), .seasonInfo:hover, .godTypeEleActive, .godTypeEle:hover {
+section a:hover:not(.episodeEle, .mediaTitFr, .mediaTit), .seasonInfo:hover, .godTypeEleActive, .godTypeEle:hover {
   color: #9237e2;
 }
 
@@ -52,23 +52,14 @@ footer {
   font-family: inter;
   text-decoration: none;
   color: unset;
+  font-weight: unset;
+  text-align: center;
 }
 
 body {
   overflow-x: hidden;
 }
-body #headerCent, body #footerCent {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  font-size: 20px;
-}
-
-a {
-  transition: 0.2s;
-}
-
-header {
+body header {
   letter-spacing: 5px;
   width: 100%;
   height: 100px;
@@ -77,16 +68,50 @@ header {
   font-weight: bold;
   text-align: center;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.headerShow {
-  animation: headerShow 0.2s ease-in-out forwards;
+body header #headerCent {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.headerHide {
-  animation: headerHide 0.2s ease-in-out forwards;
+body header #headerCent #navTitle {
+  font-size: 36px;
 }
-
+body header #headerCent #navTitle #navTitleEle {
+  transition: 0.4s letter-spacing, 0.4s margin-right;
+}
+body header #headerCent #navTitle .navTitleEleHov:hover {
+  letter-spacing: 10px;
+  margin-right: -40px;
+}
+body header #headerCent #navTheme {
+  font-size: 20px;
+}
+body header #headerCent #navTheme #navThemeEle {
+  border-radius: 32px;
+  line-height: 35px;
+  width: 130px;
+  transition: 0.4s color, 0.4s background-color, 0.4s border;
+}
+body header #headerCent #navSearch {
+  width: 50%;
+}
+body header #headerCent #navSearch #navSearchEle {
+  font-size: 20px;
+  width: 80%;
+  padding: 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 32px;
+  transition: 0.4s width;
+  line-height: 35px;
+}
+body header #headerCent #navSearch #navSearchEle:focus {
+  width: 100%;
+}
 @keyframes headerShow {
   0% {
     transform: translateY(-100%);
@@ -103,95 +128,52 @@ header {
     transform: translateY(-100%);
   }
 }
-#main {
+body .headerShow {
+  animation: headerShow 0.2s ease-in-out forwards;
+}
+body .headerHide {
+  animation: headerHide 0.2s ease-in-out forwards;
+}
+body section {
   padding-top: 140px;
   display: flex;
   justify-content: center;
 }
-
-footer {
+body footer {
+  font-size: 20px;
   letter-spacing: 3px;
   font-weight: bold;
   width: 100%;
   height: 90px;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#goUp {
+body footer #footerCent {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+body #goUp {
   bottom: 34px;
   right: 40px;
   position: fixed;
   transform: scale(3);
 }
-
-#goUp:hover {
+body #goUp:hover {
   transform: scale(3.2);
 }
-
-#navTheme {
-  width: 18%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  font-size: 20px;
-}
-#navTheme #navThemeEle {
-  border-radius: 20px;
-  height: 40px;
-  width: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.4s;
-}
-
-#navTitle {
-  font-size: 35px;
-  width: 30%;
-  display: flex;
-  justify-content: flex-start;
-}
-#navTitle #navTitleEle {
-  transition: 0.4s letter-spacing transform;
-}
-#navTitle .navTitleEleHov:hover {
-  letter-spacing: 10px;
-}
-
-#navSearch {
-  width: 52%;
-  display: flex;
-  align-items: center;
-}
-#navSearch form {
-  width: 100%;
-}
-#navSearch #navSearchEle {
-  font-size: 20px;
-  height: 40px;
-  width: 80%;
-  text-align: center;
-  padding: 0 20px;
-  text-transform: uppercase;
-  font-weight: unset;
-  letter-spacing: 3px;
-  border-radius: 32px;
-  transition: 0.4s;
-}
-#navSearch #navSearchEle:focus {
-  width: 100%;
-}
-
-#scroll {
+body #scroll {
   position: fixed;
   width: 10px;
-  right: 1px;
+  right: 2px;
   top: 0;
-  border-radius: 90px;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+  display: none;
 }
 
 #mediaEleCont {
@@ -277,119 +259,115 @@ footer {
   }
 }
 
-#videoAsideL {
-  float: left;
-  width: 50%;
+#videoCont {
+  display: flex;
+  width: 80%;
 }
-#videoAsideL #videoInfo {
+#videoCont #videoAsideL {
+  width: 40%;
+}
+#videoCont #videoAsideL #videoInfo {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
-#videoAsideL #videoInfo #videoPicOut {
+#videoCont #videoAsideL #videoInfo #videoPicOut {
   height: 400px;
+  width: -moz-fit-content;
+  width: fit-content;
   aspect-ratio: 39/58;
   border-radius: 40px;
   padding: 8px;
 }
-#videoAsideL #videoInfo #videoPicOut #videoPic {
+#videoCont #videoAsideL #videoInfo #videoPicOut #videoPic {
   width: 100%;
   height: 100%;
   border-radius: 32px;
 }
-#videoAsideL #videoInfo #videoDet {
-  width: 60%;
+#videoCont #videoAsideL #videoInfo #videoDet {
+  padding-left: 20px;
   line-height: 26px;
 }
-#videoAsideL #videoInfo #videoDet p {
+#videoCont #videoAsideL #videoInfo #videoDet p {
   margin-bottom: 16px;
-  text-align: justify;
+  text-align: left;
 }
-#videoAsideL #videoInfo #videoDet span {
+#videoCont #videoAsideL #videoInfo #videoDet span {
   font-weight: bold;
 }
-#videoAsideL #seasonList {
-  margin-top: 50px;
+#videoCont #videoAsideL #seasonList {
   font-weight: bold;
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 40px;
 }
-#videoAsideL #seasonList .seasonInfo {
+#videoCont #videoAsideL #seasonList .seasonInfo {
   padding: 16px 0;
   transition: 0.2s color;
   display: flex;
   justify-content: space-between;
 }
-#videoAsideL #seasonList .seasonInfo .seasonTit {
+#videoCont #videoAsideL #seasonList .seasonInfo .seasonTit {
   letter-spacing: 4px;
   font-size: 24px;
 }
-#videoAsideL #seasonList .seasonInfo .seasonArr {
+#videoCont #videoAsideL #seasonList .seasonInfo .seasonArr {
   font-size: 36px;
   line-height: 0;
   display: flex;
   align-items: center;
   transform: rotate(90deg);
 }
-#videoAsideL #seasonList .episodeList {
-  text-align: center;
+#videoCont #videoAsideL #seasonList .episodeList {
   display: none;
 }
-#videoAsideL #seasonList .episodeList .episodeEle {
+#videoCont #videoAsideL #seasonList .episodeList .episodeEle {
   line-height: 48px;
   display: flex;
   letter-spacing: 2px;
 }
-#videoAsideL #seasonList .episodeList .episodeEle .episodeOvr {
-  width: 10%;
+#videoCont #videoAsideL #seasonList .episodeList .episodeEle .episodeOvr {
+  width: 15%;
 }
-#videoAsideL #seasonList .episodeList .episodeEle .episodeSea {
-  width: 13%;
+#videoCont #videoAsideL #seasonList .episodeList .episodeEle .episodeSea {
+  width: 15%;
 }
-#videoAsideL #seasonList .episodeList .episodeEle .episodeTit {
-  width: 77%;
+#videoCont #videoAsideL #seasonList .episodeList .episodeEle .episodeTit {
+  width: 70%;
 }
-
-#videoAsideR {
-  width: 50%;
-  float: right;
-  justify-content: flex-end;
+#videoCont #videoAsideR {
+  width: 60%;
+}
+#videoCont #videoAsideR #videoWatch {
   display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
 }
-#videoAsideR #videoWatch {
+#videoCont #videoAsideR #videoWatch #iframeOut {
   width: 90%;
-}
-#videoAsideR #videoWatch #iframeOut {
-  width: 100%;
   display: flex;
   border-radius: 40px;
   padding: 8px;
   aspect-ratio: 16/9;
 }
-#videoAsideR #videoWatch #iframeOut #iframeId {
+#videoCont #videoAsideR #videoWatch #iframeOut #iframeId {
   border-radius: 32px;
   border: none;
   height: 100%;
   width: 100%;
 }
 
-.voidPic {
-  background-image: url(/VERTE.IO/media/franchise/void.webp);
-}
-
 #godCont {
   width: 900px;
 }
-
-#godType {
+#godCont #godType {
   border-radius: 30px;
   display: flex;
   font-weight: bold;
   text-align: center;
 }
-
-.godTypeEle, .godTypeEleActive {
+#godCont #godType .godTypeEle, #godCont #godType .godTypeEleActive {
   height: 60px;
   width: 20%;
   font-size: 26px;
@@ -397,27 +375,25 @@ footer {
   display: grid;
   align-items: center;
 }
-
-.godTypeEleActive, .godTypeEle:hover {
+#godCont #godType .godTypeEleActive, #godCont #godType .godTypeEle:hover {
   font-size: 28px;
 }
-
-.godTypeEle:nth-of-type(1) {
+#godCont #godType .godTypeEle:nth-of-type(1) {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
-
-.godTypeEle:nth-of-type(5) {
+#godCont #godType .godTypeEle:nth-of-type(5) {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-
-#generateField {
+#godCont #generateField {
   margin-top: 60px;
   text-align: center;
 }
-
-#generateField input {
+#godCont #generateField .voidPic {
+  background-image: url("/VERTE.IO/media/franchise/void.webp");
+}
+#godCont #generateField input {
   border-radius: 30px;
   margin-bottom: 10px;
   line-height: 46px;
@@ -429,15 +405,12 @@ footer {
   font-weight: bold;
   transition: 0.4s;
 }
-
-#generateField input:hover {
+#godCont #generateField input:hover {
   letter-spacing: 1px;
 }
-
-.getName {
+#godCont #generateField .getName {
   width: 60%;
 }
-
-.getOther, .getButton {
+#godCont #generateField .getOther, #godCont #generateField .getButton {
   width: 30%;
 }/*# sourceMappingURL=styles.css.map */

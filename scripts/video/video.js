@@ -8,9 +8,6 @@ function seasonCol(){
         seasonArr[i].innerHTML='>';
     }
 }
-episodeList[0].style.display = 'unset';
-let videoWatchTitle = document.getElementById('videoWatchTitle');
-let episodeOvr = document.querySelectorAll('.episodeOvr');
-let episodeSea = document.querySelectorAll('.episodeSea');
-let episodeTit = document.querySelectorAll('.episodeTit');
-let episodeEle = document.querySelectorAll('.episodeEle');
+if (episodeList.length > 0){
+    episodeList[0].style.display = 'unset';
+}

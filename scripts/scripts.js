@@ -1,7 +1,10 @@
-let main = document.querySelector('#main');
+let section = document.querySelector("section");
 let header = document.querySelector("header");
 let footerCent = document.getElementById('footerCent');
 let headerCent = document.getElementById('headerCent');
+let navSearch = document.getElementById('navSearch');
+let navTheme = document.getElementById('navTheme');
+let navTitle = document.getElementById('navTitle');
 
 //przewija na górę strony
 let goUp = document.getElementById('goUp');
@@ -14,19 +17,19 @@ setInterval(function(){
         goUp.style.opacity = '100%';
         goUp.style.pointerEvents = 'unset';
     }
-    if (innerWidth > 1100){
-        goUp.style.display = 'unset';
-    }
-    else{
+    if (document.body.clientWidth < 900){
         goUp.style.display = 'none';
+    }
+    else if (document.body.clientWidth >= 900){
+        goUp.style.display = 'unset';
     }
 },1);
 
 //scroll personalizowany
 let scroll = document.getElementById('scroll').style;
 setInterval(function(){
-    if (innerHeight < (main.offsetHeight + 20)){
-        scroll.height = ((innerHeight / main.offsetHeight) * 100) + "%";
+    if (innerHeight < (section.offsetHeight + 20)){
+        scroll.height = ((innerHeight / section.offsetHeight) * 100) + "%";
     }
     else{
         scroll.display = 'none';
@@ -36,13 +39,17 @@ setInterval(function(){
 
 //zmniejsza margines strony
 setInterval(function(){
-    if (innerWidth > 1100){
-        headerCent.style.width = '80%';
-        footerCent.style.width = '80%';
+    if (document.body.clientWidth < 900){
+        navSearch.style.display = 'none';
+        navTheme.style.display = 'none';
+        headerCent.style.justifyContent = 'center';
+        footerCent.style.justifyContent = 'center';
     }
-    else{
-        headerCent.style.width = '95%';
-        footerCent.style.width = '95%';
+    else if (document.body.clientWidth >= 900){
+        navSearch.style.display = 'unset';
+        navTheme.style.display = 'unset';
+        headerCent.style.justifyContent = 'space-between';
+        footerCent.style.justifyContent = 'flex-start';
     }
 },1);
 
@@ -68,15 +75,11 @@ setInterval(function(){
 setInterval(function(){
     if (scrollY > 100){
         navThemeEle.style.pointerEvents = 'none';
-        for (i=100;i>40;i--){
-            navThemeEle.style.opacity = i+'%';
-        }
+        navThemeEle.style.opacity = '40%';
     }
     else if (scrollY < 100){
         navThemeEle.style.pointerEvents = 'unset';
-        for (i=0;i<100;i++){
-            navThemeEle.style.opacity = i+'%';
-        }
+        navThemeEle.style.opacity = '100%';
     }
 },1);
 
@@ -107,7 +110,7 @@ function searchBar(){
 
 //minimalna wysokość strony
 setInterval(function(){
-    main.style.minHeight = innerHeight+'px';
+    section.style.minHeight = innerHeight+'px';
 },1);
 
 //tymczasowa wartość scrolla

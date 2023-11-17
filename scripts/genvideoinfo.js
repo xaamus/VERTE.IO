@@ -1,30 +1,65 @@
+let episodeEle = document.querySelectorAll('.episodeEle');
+let videoCont = document.getElementById('videoCont');
 let videoInfo = document.getElementById('videoInfo');
-let seasonList = document.getElementById('seasonList');
-let videoWatch = document.getElementById('videoWatch');
-let contentVideo = '';
-if (innerWidth > 1100){
-    contentVideo = main.innerHTML;
-}
-else{
-    if (videoInfo.classList.contains('serie')){
-        contentVideo = '';
-        contentVideo += '<div id="mainCent"><div id="videoAside">';
-        contentVideo += '<div id="videoWatch" style="margin-bottom:3rem;width:100%;display:none">';
-        contentVideo += videoWatch.innerHTML;
-        contentVideo += '</div><div id="videoInfo">';
-        contentVideo += videoInfo.innerHTML;
-        contentVideo += '</div><div id="seasonList">';
-        contentVideo += seasonList.innerHTML;
-        contentVideo += '</div></div></div><div id="scroll"></div>';
+let videoDet = document.getElementById('videoDet');
+let videoAsideL = document.getElementById('videoAsideL');
+let videoAsideR = document.getElementById('videoAsideR');
+let iframeOut = document.getElementById('iframeOut');
+let paragraph = document.querySelectorAll("p");
+
+setInterval(()=>{
+    if (document.body.clientWidth < 600){
+        videoCont.style.flexDirection = 'column-reverse';
+        videoInfo.style.flexDirection = 'column';
+        videoInfo.style.rowGap = '15px';
+        videoInfo.style.marginBottom = '15px';
+        videoDet.style.padding = '0px';
+        videoCont.style.width = '90%';
+        videoAsideL.style.width = '100%';
+        videoAsideR.style.width = '100%';
+        iframeOut.style.width = '100%';
+        videoInfo.style.alignItems = 'center';
+        paragraph[1].style.textAlign = 'center';
+        for (i=0;i<episodeEle.length;i++){
+            episodeEle[i].style.fontSize = '14px';
+            episodeEle[i].style.lineHeight = '34px';
+            episodeEle[i].style.letterSpacing = '1px';
+        }
     }
-    else{
-        contentVideo = '';
-        contentVideo += '<div id="mainCent"><div id="videoAside">';
-        contentVideo += '<div id="videoWatch" style="margin-bottom:3rem;width:100%">';
-        contentVideo += videoWatch.innerHTML;
-        contentVideo += '</div><div id="videoInfo">';
-        contentVideo += videoInfo.innerHTML;
-        contentVideo += '</div></div><div id="scroll"></div>';
+    else if (document.body.clientWidth < 1400){
+        videoCont.style.flexDirection = 'row';
+        videoInfo.style.flexDirection = 'column';
+        videoInfo.style.rowGap = '30px';
+        videoInfo.style.marginBottom = '15px';
+        videoDet.style.padding = '0px';
+        videoCont.style.width = '90%';
+        videoAsideL.style.width = '50%';
+        videoAsideR.style.width = '50%';
+        iframeOut.style.width = '100%';
+        videoInfo.style.alignItems = 'flex-start';
+        paragraph[1].style.textAlign = 'left';
+        for (i=0;i<episodeEle.length;i++){
+            episodeEle[i].style.fontSize = '20px';
+            episodeEle[i].style.lineHeight = '48px';
+            episodeEle[i].style.letterSpacing = '2px';
+        }
     }
-}
-main.innerHTML = contentVideo;
+    else if (document.body.clientWidth >= 1400){
+        videoCont.style.flexDirection = 'row';
+        videoInfo.style.flexDirection = 'row';
+        videoInfo.style.rowGap = '0px';
+        videoInfo.style.marginBottom = '50px';
+        videoDet.style.padding = '20px';
+        videoCont.style.width = '80%'
+        videoAsideL.style.width = '50%';
+        videoAsideR.style.width = '50%';
+        iframeOut.style.width = '90%';
+        videoInfo.style.alignItems = 'flex-start';
+        paragraph[1].style.textAlign = 'left';
+        for (i=0;i<episodeEle.length;i++){
+            episodeEle[i].style.fontSize = '20px';
+            episodeEle[i].style.lineHeight = '48px';
+            episodeEle[i].style.letterSpacing = '2px';
+        }
+    }
+},1)

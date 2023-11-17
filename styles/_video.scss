@@ -1,94 +1,96 @@
-#videoAsideL{
-    float: left;
-    width: 50%;
-    #videoInfo{
-        font-size: 20px;
-        display: flex;
-        justify-content: space-between;
-        #videoPicOut{
-            height: 400px;
-            aspect-ratio: 39/58;
-            border-radius: 40px;
-            padding: 8px;
-            #videoPic{
-                width: 100%;
-                height: 100%;
-                border-radius: 32px;
-            }
-        }
-        #videoDet{
-            width: 60%;
-            line-height: 26px;
-            p{
-                margin-bottom: 16px;
-                text-align: justify;
-            }
-            span{
-                font-weight: bold;
-            }
-        }
-    }
-    #seasonList{
-        margin-top: 50px;
-        font-weight: bold;
-        font-size: 20px;
-        text-transform: uppercase;
-        margin-bottom: 40px;
-        .seasonInfo{
-            padding: 16px 0;
-            transition: .2s color;
+#videoCont{
+    display: flex;
+    width: 80%;
+    #videoAsideL{
+        width: 40%;
+        #videoInfo{
+            font-size: 20px;
             display: flex;
             justify-content: space-between;
-            .seasonTit{
-                letter-spacing: 4px;
-                font-size: 24px;
+            margin-bottom: 50px;
+            #videoPicOut{
+                height: 400px;
+                width: fit-content;
+                aspect-ratio: 39/58;
+                border-radius: 40px;
+                padding: 8px;
+                #videoPic{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 32px;
+                }
             }
-            .seasonArr{
-                font-size: 36px;
-                line-height: 0;
-                display: flex;
-                align-items: center;
-                transform: rotate(90deg);
+            #videoDet{
+                padding-left: 20px;
+                line-height: 26px;
+                p{
+                    margin-bottom: 16px;
+                    text-align: left;
+                }
+                span{
+                    font-weight: bold;
+                }
             }
         }
-        .episodeList{
-            text-align: center;
-            display: none;
-            .episodeEle{
-                line-height: 48px;
+        #seasonList{
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            .seasonInfo{
+                padding: 16px 0;
+                transition: .2s color;
                 display: flex;
-                letter-spacing: 2px;
-                .episodeOvr{
-                    width: 10%;
+                justify-content: space-between;
+                .seasonTit{
+                    letter-spacing: 4px;
+                    font-size: 24px;
                 }
-                .episodeSea{
-                    width: 13%;
+                .seasonArr{
+                    font-size: 36px;
+                    line-height: 0;
+                    display: flex;
+                    align-items: center;
+                    transform: rotate(90deg);
                 }
-                .episodeTit{
-                    width: 77%;
+            }
+            .episodeList{
+                display: none;
+                .episodeEle{
+                    line-height: 48px;
+                    display: flex;
+                    letter-spacing: 2px;
+                    .episodeOvr{
+                        width: 15%;
+                    }
+                    .episodeSea{
+                        width: 15%;
+                    }
+                    .episodeTit{
+                        width: 70%;
+                    }
                 }
             }
         }
     }
-}
-#videoAsideR{
-    width: 50%;
-    float: right;
-    justify-content: flex-end;
-    display: flex;
-    #videoWatch{
-        width: 90%;
-        #iframeOut{
-            width: 100%;
+    #videoAsideR{
+        width: 60%;
+        #videoWatch{
             display: flex;
-            border-radius: 40px;
-            padding: 8px;
-            aspect-ratio: 16/9;
-            #iframeId{
-                border-radius: 32px;
-                border: none;
-                height: 100%;
-                width: 100%;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+            #iframeOut{
+                width: 90%;
+                display: flex;
+                border-radius: 40px;
+                padding: 8px;
+                aspect-ratio: 16/9;
+                #iframeId{
+                    border-radius: 32px;
+                    border: none;
+                    height: 100%;
+                    width: 100%;
+                }
             }
         }
     }
